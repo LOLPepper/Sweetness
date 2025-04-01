@@ -1,164 +1,170 @@
-/* General Styling */
+/* General body styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
+    background-color: #e8f7e8;  /* Light green background */
+    color: #4c4c4c;  /* Dark gray text for readability */
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    box-sizing: border-box;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
+/* Header styles */
+header {
+    background-color: #4CAF50;  /* Green header */
+    color: white;
+    padding: 20px;
+    text-align: center;
 }
 
-h1, h2, h3 {
-    color: #333;
+header h1 {
+    font-size: 3em;
+    margin: 0;
 }
 
-/* Navbar */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #333;
-    padding: 10px 20px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.navbar .logo h1 {
-    color: #fff;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-}
-
-.nav-links li {
-    margin-left: 20px;
-}
-
-.nav-links a {
-    color: #fff;
-    font-weight: bold;
-    padding: 10px;
-}
-
-.nav-links a:hover {
-    background-color: #444;
+header h2 {
+    font-size: 1.5em;
+    margin: 0;
 }
 
 /* Hero Section */
 .hero {
-    background: #333 url('assets/hero-image.jpg') center center/cover no-repeat;
+    background: #8a2be2;  /* Purple background */
     color: white;
     height: 60vh;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.hero-text {
     text-align: center;
-    font-size: 2em;
 }
 
-.hero-text h2 {
+.hero h2 {
+    font-size: 3.5em;
     margin: 0;
 }
 
-.hero-text p {
-    margin-top: 10px;
-}
-
 /* About Section */
-.about {
+#about {
+    background-color: #d8f7e8;  /* Lighter green background */
     padding: 40px 20px;
-    background-color: white;
+    text-align: center;
 }
 
-.about h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
+#about h2 {
+    color: #4CAF50;  /* Green for the heading */
 }
 
-/* Projects Section */
-.projects {
-    background-color: #f9f9f9;
+#about p {
+    color: #333;
+    font-size: 1.2em;
+}
+
+/* Portfolio Section */
+#portfolio {
     padding: 40px 20px;
+    text-align: center;
+    background-color: #8a2be2;  /* Purple background */
+    color: white;
 }
 
-.projects h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
+#portfolio h2 {
+    font-size: 2.5em;
 }
 
-.project-cards {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.card {
-    background-color: white;
-    padding: 20px;
+#portfolio .project {
+    display: inline-block;
     width: 30%;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    border-radius: 8px;
+    background-color: #fff;
+    color: #333;
+    padding: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#portfolio .project img {
+    width: 100%;
     border-radius: 8px;
 }
 
-.card h3 {
-    margin-top: 0;
+#portfolio .project h3 {
+    color: #8a2be2;  /* Purple for the project titles */
 }
 
 /* Contact Section */
-.contact {
+#contact {
     padding: 40px 20px;
-    background-color: white;
+    background-color: #d8f7e8;  /* Light green background */
+    text-align: center;
 }
 
-.contact form {
-    display: flex;
-    flex-direction: column;
+#contact h2 {
+    color: #4CAF50;  /* Green for the heading */
 }
 
-.contact input, .contact textarea {
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.contact button {
-    padding: 10px;
-    background-color: #333;
-    color: white;
-    border: none;
-    border-radius: 5px;
-}
-
-.contact button:hover {
-    background-color: #444;
+#contact p {
+    color: #333;
+    font-size: 1.2em;
 }
 
 /* Footer */
-.footer {
-    background-color: #333;
+footer {
+    background-color: #4CAF50;  /* Green footer */
     color: white;
     padding: 20px;
     text-align: center;
 }
 
+footer p {
+    font-size: 1em;
+    margin: 0;
+}
+
+/* Button styles */
+button {
+    background-color: #8a2be2;  /* Purple button */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+}
+
+button:hover {
+    background-color: #7a1ae1;  /* Darker purple on hover */
+}
+
+/* Links */
+a {
+    color: #8a2be2;  /* Purple links */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #4CAF50;  /* Green on hover */
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
-    .project-cards {
-        flex-direction: column;
-        align-items: center;
+    .hero h2 {
+        font-size: 2.5em;
     }
 
-    .card {
-        width: 80%;
+    #portfolio .project {
+        width: 45%;
+    }
+
+    #about, #contact {
+        padding: 20px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h2 {
+        font-size: 2em;
+    }
+
+    #portfolio .project {
+        width: 100%;
     }
 }
