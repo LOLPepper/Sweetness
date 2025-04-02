@@ -51,16 +51,18 @@
         </div>
     </section>
 
+    <!-- Updated Contact Section -->
     <section id="contact" class="contact">
         <h2>Contact</h2>
         <p>If you'd like to work together or just say hello, feel free to reach out!</p>
-        <form action="submit_form" method="POST">
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" required></textarea>
+        <form id="contactForm">
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
             <button type="submit">Send</button>
         </form>
     </section>
 
+    <!-- Backend Message Display -->
     <section id="message-display">
         <h3>Backend Message:</h3>
         <div id="message"></div>  <!-- This will display the backend message -->
